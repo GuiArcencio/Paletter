@@ -28,8 +28,8 @@ Using the following palette:
 ```
 The original and *paletted* pictures are seen below:
 
-![Original image](/examples/original.jpg)
-![Paletted image](/examples/paletted.png)
+<img src="/examples/original.jpg" width="500">
+<img src="/examples/original.png" width="500">
 
 I've put a number of palettes you can play with in the `examples/palettes` folder.
 
