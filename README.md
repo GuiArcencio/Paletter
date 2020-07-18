@@ -28,7 +28,7 @@ Using the following palette:
 ```
 The original and *paletted* pictures are seen below:
 
-|<img src="/examples/original.jpg" width="500">|<img src="/examples/paletted.png" width="500">|
+|<img src="/examples/original.jpg" width="600">|<img src="/examples/paletted.png" width="600">|
 |:-:|:-:|
 
 I've put a number of palettes you can play with in the `examples/palettes` folder.
