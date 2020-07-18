@@ -1,7 +1,7 @@
 # Paletter
 #### A little pet project born out of quarantine boredom.
 
-Do you have a nice picture and a cool palette and want to mix them up? Your solution is here! Use paletter to make all colors in your image turn into one of the colors in the palette, according to their "color difference".
+Do you have a nice picture and a cool palette and want to mix them up? Your solution is here! Use paletter to make all colors in your image turn into one of the colors in the palette, minimizing their "color difference".
 
 ### Compiling
 With [gcc](https://gcc.gnu.org/) installed on your machine, simply run:
