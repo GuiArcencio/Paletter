@@ -13,13 +13,17 @@ in the repository's root directory.
 ### Usage
 To use Paletter, you will need an image file and a [CSV](https://en.wikipedia.org/wiki/Comma-separated_values) file that contains the hexcode of each color in your palette, separated by commas. Then, run:
 ```
-./paletter <path-to-image-file> <path-to-csv-file>
+./paletter <path-to-image-file> <path-to-csv-file> <output-file>
 ```
 Or, if you use Windows, you might have to rename the file "paletter.exe", and then run:
 ```
-paletter.exe <path-to-image-file> <path-to-csv-file>
+paletter.exe <path-to-image-file> <path-to-csv-file> <output-file>
 ```
-The output will be saved to `res.png` (plan to change it soon).
+There are four supported output formats:
+- PNG (.png)
+- JPG (.jpg, .jpeg, .jpe, .jif, .jfif, .jfi)
+- BMP (.bmp, .dib)
+- TGA (.tga, .targa, .tpic)
 
 ### Example
 Using the following palette:
