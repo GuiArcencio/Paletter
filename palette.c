@@ -1,5 +1,8 @@
 #include "palette.h"
 
+#include <string.h>
+#include <stdlib.h>
+
 Color *read_palette_file(const char *filename) 
 {
     // Reads CSV file containing hex codes for the colors
@@ -7,23 +10,36 @@ Color *read_palette_file(const char *filename)
     FILE *fp = fopen(filename, "r");
     if (!fp) return NULL;
 
+    fseek(fp, 0, SEEK_END);
+    long int filesize = ftell(fp);
+    fseek(fp, 0, SEEK_SET);
+
+    char *file_str = malloc(filesize * sizeof(char));
+    fread(file_str, filesize, 1, fp);
+
+    fclose(fp);
+
     Color *color_list = NULL;
     unsigned int hex_color;
-    char delim;
-    do 
+    char *hex_str = strtok(file_str, ",");
+
+    while (hex_str != NULL) 
     {
-        fscanf(fp, "%x", &hex_color);
-        delim = fgetc(fp);
+        sscanf(hex_str, "%x", &hex_color);
+
         Color new_color;
         new_color.B = hex_color % 256;
         hex_color >>= 8;
         new_color.G = hex_color % 256;
         hex_color >>= 8;
         new_color.R = hex_color % 256;
-        sb_push(color_list, new_color);
-    } while (delim == ',');
 
-    fclose(fp);
+        sb_push(color_list, new_color);
+
+        hex_str = strtok(NULL, ",");
+    }
+
+    free(file_str);
     return color_list;
 }
 
