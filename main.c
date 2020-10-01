@@ -32,6 +32,7 @@ int main(int argc, char **argv)
 
     apply_palette(pixel_data, width, height, color_list);
 
+    // Check for file types
     switch (imgf)
     {
         case PNG:
